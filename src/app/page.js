@@ -25,10 +25,13 @@ export default function Home() {
     <main>
       <Slider />
       <About />
-      <Gallery />
-      <Events />
-      <Stats />
+      {/* <Gallery /> */}
       <Card />
+
+      <Events />
+
+      <Stats />
+      {/* <Card />  S */}
 
       <button
         className={`fixed top-[500px] left-4 p-2 rounded-full z-50 ${

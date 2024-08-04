@@ -1,5 +1,7 @@
 import React from "react";
 import SocialPost from "./socialFace";
+import SocialTweet from "./socialTweet";
+import ScoialT from "./tweet";
 
 const SocialPosts = () => {
   const posts = [
@@ -14,9 +16,11 @@ const SocialPosts = () => {
   ];
   return (
     <div>
-      {posts.map((item, ind) => (
+      {/* {posts.map((item, ind) => (
         <SocialPost key={ind} text={item} link={links.shift()} />
-      ))}
+      ))} */}
+      <SocialTweet />
+      {/* <ScoialT /> */}
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Navbar = () => {
     { name: "Who We Are", href: "#" },
     { name: "What We Do", href: "/wwd", hasDropdown: true },
     { name: "Get Involved", href: "#" },
-    { name: "Stories", href: "#" },
+    { name: "Stories", href: "/blog" },
     { name: "Visits", href: "#" },
   ];
 

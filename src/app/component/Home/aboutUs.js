@@ -16,7 +16,7 @@ const About = () => {
         </div>
         <div className="py-6">
           <h1 className="font-lora text-[46px] font-bold border-b-4 border-green-700 inline-block">
-            Who are we?
+            Who we are
           </h1>
           <p className="text-[25px] mt-8 pr-32 font-popins">
             PONT is a small charity in Rhondda Cynon Taff, South Wales making a
@@ -43,7 +43,7 @@ const About = () => {
         </div>
         <div className="py-6 order-1">
           <h1 className="font-lora text-[46px] font-bold border-b-4 border-green-700 inline-block">
-            More About Us
+            What we do
           </h1>
           <p className="text-[25px] mt-8 pr-32 font-popins">
             We set up PONT to see what difference we could make in one specific

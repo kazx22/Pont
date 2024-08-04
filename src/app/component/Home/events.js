@@ -103,8 +103,8 @@ const Events = () => {
               </div>
             </div>
             <div className="flex justify-between mt-4 px-10">
-              <p>Raised: $56 880</p>
-              <p>Goal: $70 000</p>
+              <p>Raised: £56 880</p>
+              <p>Goal: £70 000</p>
             </div>
           </div>
         </div>

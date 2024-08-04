@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import SocialPosts from "../socialPosts";
 
-const images = [gt, gt2, gt3];
+const images = [gt3, gt2, gt];
 const youtubeVideos = [
   "https://www.youtube.com/embed/j1duppP7upY",
   "https://www.youtube.com/embed/8aGhZQkoFbQ",
@@ -23,7 +23,7 @@ const Slider = () => {
     setActind(index);
   };
 
-  const tabHead = ["Socials", "Events", "Stories"];
+  const tabHead = ["Socials", "News", "Stories"];
 
   return (
     <div className="relative">
@@ -114,13 +114,13 @@ const Slider = () => {
           <h1 className="text-[65px] font-lora font-bold text-white">
             To the People of Wales & Uganda
           </h1>
-          <button className="bg-summer-org hover:bg-green-700 text-white text-[22px] font-medium px-12 py-4 rounded-full mt-5 flex items-center transition-all duration-500 ease-in-out">
+          {/* <button className="bg-summer-org hover:bg-green-700 text-white text-[22px] font-medium px-12 py-4 rounded-full mt-5 flex items-center transition-all duration-500 ease-in-out">
             Donate Now
             <FontAwesomeIcon
               icon={faArrowRight}
               className="ml-2 h-[20px] w-[20px]"
             />
-          </button>
+          </button> */}
         </div>
       )}
 

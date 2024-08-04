@@ -48,7 +48,7 @@ const Join = () => {
             ))}
           </div>
         </div>
-        <div className="h-auto w-[400px] bg-[#38311E]">
+        {/* <div className="h-auto w-[400px] bg-[#38311E]">
           <div className="flex-col justify-center items-center px-10 py-16">
             <h4 className="text-summer-org  font-popins text-[10px]">
               DONATE NOW
@@ -105,7 +105,7 @@ const Join = () => {
               Donate Now
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

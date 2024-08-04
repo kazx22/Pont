@@ -21,16 +21,16 @@ const ScrollButtons = () => {
   return (
     <div className="fixed bottom-4 right-4 flex flex-col space-y-2">
       <button
-        className="h-[80px] w-[80px] rounded-full bg-summer-org hover:bg-white text-white hover:text-summer-org flex items-center justify-center transition-colors"
+        className="h-[120px] w-[120px] rounded-full bg-summer-org hover:bg-white text-white hover:text-summer-org flex items-center justify-center transition-colors"
         onClick={scrollToTop}
       >
         <FontAwesomeIcon
           icon={faArrowUp}
-          className="h-[20px] w-[20px] transition-colors"
+          className="h-[40px] w-[40px] transition-colors"
         />
       </button>
       <button
-        className="h-[80px] w-[80px] rounded-full bg-summer-org hover:bg-white text-white hover:text-summer-org flex items-center justify-center transition-colors font-bold"
+        className="h-[120px] w-[120px] text-[28px] rounded-full bg-summer-org hover:bg-white text-white hover:text-summer-org flex items-center justify-center transition-colors font-bold"
         onClick={scrollToJoin}
       >
         Donate
