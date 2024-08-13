@@ -4,8 +4,7 @@ import Image from "next/image";
 import gt from "../../img/gt.jpg";
 import gt2 from "../../img/gt2.jpg";
 import gt3 from "../../img/gt3.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+
 import SocialPosts from "../socialPosts";
 
 const images = [gt3, gt2, gt];

@@ -13,32 +13,59 @@ import {
   FaCaretDown,
 } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import fetchProjectType from "@/app/functions/fetchProjects";
 
 const Navbar = () => {
   const pathname = usePathname();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const [subNavItem, setSubNavItem] = useState([
+    { name: "Ambulance", href: "/wwd/ambulance" },
+    { name: "Community Health", href: "/wwd/community" },
+    { name: "Education", href: "/wwd/education" },
+  ]);
 
   const mainNavItem = [
     { name: "Home", href: "/" },
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/contactUs" },
     { name: "Who We Are", href: "#" },
     { name: "What We Do", href: "/wwd", hasDropdown: true },
     { name: "Get Involved", href: "#" },
     { name: "Stories", href: "/blog" },
-    { name: "Visits", href: "#" },
-  ];
-
-  const subNavItem = [
-    { name: "Ambulance", href: "/wwd/ambulance" },
-    { name: "Community Health", href: "/wwd/community" },
-    { name: "Education", href: "/wwd/education" },
+    { name: "Visits", href: "/visits" },
   ];
 
   const handleDropdownToggle = (e) => {
     e.preventDefault();
-    setDropdownOpen(!dropdownOpen);
+    setDropdownOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    const fetchTypes = async () => {
+      try {
+        const types = await fetchProjectType();
+        const newSubNavItems = types.map((type) => ({
+          name: type.type_name,
+          href: `/wwd/${type.id}`,
+        }));
+
+        setSubNavItem((prev) => {
+          const exists = new Set(prev.map((item) => item.name));
+          const unique = newSubNavItems.filter(
+            (item) => !exists.has(item.name)
+          );
+          return [...prev, ...unique];
+        });
+      } catch (error) {
+        console.error("Error fetching project types:", error);
+      }
+    };
+    fetchTypes();
+  }, []);
+
+  useEffect(() => {
+    console.log("subNavItem updated:", subNavItem);
+  }, [subNavItem]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {

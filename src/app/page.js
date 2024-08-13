@@ -33,14 +33,14 @@ export default function Home() {
       <Stats />
       {/* <Card />  S */}
 
-      <button
+      {/* <button
         className={`fixed top-[500px] left-4 p-2 rounded-full z-50 ${
           !isOpen ? "bg-summer-org text-white" : "text-white bg-green-700"
         }`}
         onClick={toggleDrawer}
       >
         Pallete
-      </button>
+      </button> */}
 
       <div
         className={`fixed top-1/2 left-0 transform -translate-y-1/2 h-1/2 bg-white shadow-md transition-transform ${
