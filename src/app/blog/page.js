@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import BlogCard from "../component/blog/blogCard";
-
+import parseText from "../functions/parseText";
 const Posts = () => {
   const [blogs, setBlogs] = useState([]);
   const [curPage, setCurPage] = useState(0);
@@ -52,7 +52,12 @@ const Posts = () => {
 
   const startIndex = curPage * postsPerPage;
   const selectedBlogs = blogs.slice(startIndex, startIndex + postsPerPage);
-
+  const handleText = (text) => {
+    const parsedText = parseText(text);
+    return parsedText
+      .map((item) => (item.type === "paragraph" ? item.text : ""))
+      .join(" ");
+  };
   return (
     <div className="container mx-auto px-4 py-8">
       <div className=" text-center">
@@ -65,8 +70,9 @@ const Posts = () => {
           <div key={index}>
             <BlogCard
               heading={blog.title}
-              text={blog.content}
-              image={blog.image}
+              text={handleText(blog.content)}
+              image={`${process.env.NEXT_PUBLIC_BASE_URL}${blog.image_field_1.image}`}
+              date={blog.created_at}
               path={`/blog/${blog.id}`}
             />
           </div>

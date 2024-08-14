@@ -63,9 +63,7 @@ const Navbar = () => {
     fetchTypes();
   }, []);
 
-  useEffect(() => {
-    console.log("subNavItem updated:", subNavItem);
-  }, [subNavItem]);
+  useEffect(() => {}, [subNavItem]);
 
   useEffect(() => {
     const handleClickOutside = (e) => {

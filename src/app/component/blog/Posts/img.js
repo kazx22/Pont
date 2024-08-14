@@ -1,11 +1,9 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
 const Img = ({ text, img }) => {
   const imgArray = [...img];
   let images;
-  const [index, setIndex] = useState(0);
   switch (text) {
     case "1":
       const firstImg = imgArray.shift();
@@ -27,7 +25,7 @@ const Img = ({ text, img }) => {
       imgSrc.push(imgArray.shift());
       imgSrc.push(imgArray.shift());
       images = images = (
-        <div className="flex gap-12">
+        <div className="flex space-x-12">
           {imgSrc.map((val, ind) => (
             <div key={ind} className="shrink-0 order-2 text-center">
               <Image
@@ -51,7 +49,7 @@ const Img = ({ text, img }) => {
       imgSrc1.push(imgArray.shift());
 
       images = (
-        <div className="flex gap-12">
+        <div className="flex space-x-4">
           {imgSrc1.map((val, ind) => (
             <div key={ind} className="shrink-0 order-2 text-center">
               <Image
