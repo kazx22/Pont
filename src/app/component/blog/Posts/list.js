@@ -5,7 +5,7 @@ const List = ({ text }) => {
 
   return (
     <div>
-      <ul className="mt-6 ml-6 space-y-4">
+      <ul className="my-6 ml-6 space-y-4">
         {bulletins.map((item, ind) => (
           <li
             key={ind}

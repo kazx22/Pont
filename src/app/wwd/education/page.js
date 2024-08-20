@@ -32,7 +32,7 @@ const Education = () => {
     "We’ve linked over 100 schools in Wales with schools in Mbale region – including nursery, infants, primary, secondary and special schools. Schools send each other letters and pictures and many teachers, headteachers and students have visited each other. Partnerships allow teachers and pupils to learn about and respect each other’s cultures and ways of life. They share ideas and experiences and develop common projects to enhance the curriculum in areas such as literacy, numeracy, geography, sport, music, and sustainable development. Schools build up friendships and this usually leads to Welsh schools helping their Ugandan friends to have basic equipment, better facilities and resources to give them more opportunities. Many schools have provided sports kit and equipment, textbooks and exercise books, and the chance to plant trees to fight climate change.",
   ];
   const img = co1;
-  const blog = ['"They call me Musawo"'];
+  // const blog = ['"They call me Musawo"'];
   const blogPara = [
     '"A good friend always finds out what is best for the friend and tries to do something about it by word or action. In the same way, our PONT family constantly find ways of making the friendship more meaningful.”',
   ];

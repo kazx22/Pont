@@ -1,6 +1,6 @@
 export default function parseText(text) {
   const regex =
-    /<sh>\s*(.*?)\s*<\/sh>|<par>\s*([\s\S]*?)\s*<\/par>|<ls>\s*(.*?)\s*<\/ls>|<img>\s*(.*?)\s*<\/img>|<vid>\s*(.*?)\s*<\/vid>/g;
+    /<sh>(.*?)<\/sh>|<par>\s*([\s\S]*?)\s*<\/par>|<ls>\s*(.*?)\s*<\/ls>|<img>\s*(.*?)\s*<\/img>|<vid>\s*(.*?)\s*<\/vid>/g;
 
   let match = [];
   const result = [];

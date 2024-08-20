@@ -2,8 +2,6 @@ import React from "react";
 import CoverImage from "../covImg";
 import Heading from "../heading";
 import gt from "../../img/amb.jpg";
-import bd1 from "../../img/bd1.png";
-import bd2 from "../../img/bd2.png";
 
 const Cover = () => {
   const heading1 = [
