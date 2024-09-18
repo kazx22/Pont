@@ -1,13 +1,8 @@
 import React from "react";
 import axios from "axios";
 import Heading from "@/app/component/blog/Posts/heading";
-import MainText from "@/app/component/blog/Posts/mainText";
 import parseText from "@/app/functions/parseText";
 import MainBody from "@/app/component/blog/Posts/mainBody";
-import ma1 from "../../img/MA1.jpg";
-import ma2 from "../../img/MA2.jpg";
-import ma3 from "../../img/MA3.jpeg";
-import ma4 from "../../img/MA4.jpg";
 
 const fetchBlogPost = async (slug) => {
   try {

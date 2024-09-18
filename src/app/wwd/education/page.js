@@ -50,7 +50,7 @@ const Education = () => {
   ];
   return (
     <div>
-      <CoverImage img1={gt} head={"COMMUNITY HEALTH"} />
+      <CoverImage img1={gt} head={"EDUCATION"} />
       <Heading heading1={heading1[0]} heading2={heading1[1]} />
       <div className="w-[80%] mx-auto mt-10">
         <div className="flex gap-3">
