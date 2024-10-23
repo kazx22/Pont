@@ -9,6 +9,7 @@ const fetchBlogPost = async (slug) => {
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_BASE_URL}/api/blog/update/${slug}/`
     );
+    console.log(response.data);
     return response.data;
   } catch (error) {
     throw new Error("Blog not found");
@@ -26,9 +27,11 @@ const BlogPost = async ({ params }) => {
     <div className="container mx-auto px-4 py-8">
       <div className="text-center">{<Heading head={blog.title} />}</div>
 
-      <div>
-        <MainBody body={parseText(blog.content)} blog={blog} />
-      </div>
+      <div>{/* <MainBody body={parseText(blog.content)} blog={blog} /> */}</div>
+      <div
+        className="blog-content"
+        dangerouslySetInnerHTML={{ __html: blog.content }}
+      />
     </div>
   );
 };
